@@ -1,0 +1,15 @@
+checagem,condição,status,detalhe
+Label Drift,Label drift score < 0.15,FAIL,Label's drift score Kolmogorov-Smirnov is 0.21
+Train Test Performance,Train-Test scores relative degradation is less than 0.3,FAIL,3 scores failed. Found max degradation of 254.83% for metric Neg MAE
+Regression Error Distribution - Test Dataset,Systematic error ratio lower than 0.3,FAIL,Found systematic error to rmse ratio of 0.68
+Feature Drift,categorical drift score < 0.2 and numerical drift score < 0.2,PASS,"Passed for 11 columns out of 11 columns.
+Found column ""weather"" has the highest categorical drift score: 0.04
+Found column ""humidity"" has the highest numerical drift score: 0.09"
+Multivariate Drift,Drift value is less than 0.75,PASS,"Found drift value of: 0.3, corresponding to a domain classifier AUC of: 0.65"
+New Category Train Test,Ratio of samples with a new category is less or equal to 1%,PASS,Passed for 5 relevant features
+Prediction Drift,Prediction drift score < 0.15,PASS,Found model prediction Kolmogorov-Smirnov drift score of 0.03
+Regression Error Distribution - Train Dataset,Systematic error ratio lower than 0.3,PASS,Found systematic error to rmse ratio of 0.03
+PercentOfNulls - Train Dataset,Percent of null values in each column is not greater than 5%,PASS,Passed for 11 relevant columns
+PercentOfNulls - Test Dataset,Percent of null values in each column is not greater than 5%,PASS,Passed for 11 relevant columns
+Data Duplicates - Train Dataset,Duplicate data ratio is less or equal to 1%,PASS,Found 0% duplicate data
+Data Duplicates - Test Dataset,Duplicate data ratio is less or equal to 1%,PASS,Found 0% duplicate data

@@ -1,0 +1,46 @@
+{
+  "backend": "lightgbm",
+  "train_window": "2011, dias 1 a 23 de cada mês",
+  "reference_window": "2011, dias 24 em diante de cada mês (holdout)",
+  "sigma_resid_log": 0.41406619925898996,
+  "use_bias_correction": false,
+  "sigma_used": 0.0,
+  "validation": {
+    "baseline (hora × dia útil)": {
+      "RMSE": 83.27194979680982,
+      "MAE": 59.00878745524258,
+      "R2": 0.6261594839940342,
+      "RMSLE": 0.6669050012912185
+    },
+    "modelo (expm1, sem correção)": {
+      "RMSE": 41.126264748577725,
+      "MAE": 26.209515191136564,
+      "R2": 0.9088141535347468,
+      "RMSLE": 0.41488284225857974
+    },
+    "modelo (com correção de viés)": {
+      "RMSE": 43.97440555158799,
+      "MAE": 28.073912569106124,
+      "R2": 0.8957469295153053,
+      "RMSLE": 0.42887934062829863
+    }
+  },
+  "features": [
+    "hour",
+    "month",
+    "holiday",
+    "workingday",
+    "temp",
+    "atemp",
+    "humidity",
+    "windspeed",
+    "season",
+    "weekday",
+    "weather"
+  ],
+  "cat_features": [
+    "season",
+    "weekday",
+    "weather"
+  ]
+}
